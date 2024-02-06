@@ -1,0 +1,51 @@
+﻿@page
+@model FarmingApp.Pages.SearchResultsModel
+@{
+    ViewData["Title"] = "Location Page";
+}
+
+<!DOCTYPE html>
+
+<h2 align="center"><strong> Start your Journey to a Better Harvest Below</strong></h2>
+<h2>&#128104;</h2>
+<form id="locationForm" action="/SearchResults">
+        <i class="fa-solid fa-location-arrow fa-sm"></i>
+      <input type="text" id="locInp" name="location" class="form-control" value="Where are you located?" />
+      <input type="text" id="cropInp" name="crop" class="form-control" value="What crop are you planting?" />
+    
+      <input type="submit" id="submitBtn" value="Search" class="btn btn-primary" />
+    </form>
+<button id="locBtn" onclick="getLocation()"><i class="fa fa-location-arrow"></i></button>
+
+<h2 align="center"> <strong>Traditionally When the Most Popular American Crops are Planted</strong></h2>
+<center>
+<table style="width:30%">
+    <tr>
+        <th>Plant</th>
+        <th>What month to Plant</th>
+    </tr>
+    <tr>
+        <td> Wheat </td>
+        <td> September </td>
+    </tr>
+    <tr>
+        <td> Corn </td>
+        <td> May </td>
+    </tr>
+    <tr>
+        <td> Soybean </td>
+        <td> May </td>
+    </tr>
+    <tr>
+        <td> Cotton </td>
+        <td> May </td>
+    </tr>
+    <tr>
+        <td> Hay </td>
+        <td> March </td>
+    </tr>
+ 
+</table>
+</center>
+
+
