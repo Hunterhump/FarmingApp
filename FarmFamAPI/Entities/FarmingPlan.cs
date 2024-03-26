@@ -12,4 +12,4 @@ namespace FarmFamAPI.Entities
         public string CompData { get; set; }
     }
 }
-}
+
