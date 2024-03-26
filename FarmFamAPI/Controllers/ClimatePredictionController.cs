@@ -8,12 +8,23 @@ namespace FarmFamAPI.Controllers
     [ApiController]
     public class ClimatePredictionController : Controller
     {
-      private readonly IClimatePredictionService climatePredictionService;
+        private readonly IClimatePredictionService climatePredictionService;
         public ClimatePredictionController(IClimatePredictionService climatePredictionService)
         {
             this.climatePredictionService = climatePredictionService;
         }
-        [HttpGet("getGetClimatePredictionByState")]
-        public async Task<List<ClimatePrediction>> GetClimatePredictionsByState(char State);
+        
     }
+    [HttpGet("{State}")]
+
+    public async Task<List<ClimatePrediction>> GetClimatePredictionsByState(char State);
+    {
+    var ClimatePredictionByState = await climatePredictionService.GetClimatePredictionsByState(State);
+    if (ClimatePredictionByState == null) 
+        {
+        return NotFound();
 }
+return ClimatePredictionByState;
+}
+}
+
