@@ -13,9 +13,7 @@ namespace FarmFamAPI.Repositories
         {
             _dbContextClass = dbContextClass;
         }
-        public async Task<List<ClimatePrediction>> GetClimatePredictions()
-        {
-            var param = new SqlParameter("")
-        }
+        public async Task<List<ClimatePrediction>> GetClimatePredictions();
+        
     }
 }

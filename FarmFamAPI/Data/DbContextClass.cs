@@ -9,5 +9,8 @@ namespace FarmFamAPI.Data
         public DbContextClass(DbContextOptions<DbContextClass>options) : base(options)
         { }
         public DbSet<ClimatePrediction> ClimatePredictions { get; set;}
-    }
+        public DbSet<Crop> Crop { get; set;}
+        public DbSet<FarmingPlan> FarmingPlan { get; set;}
+        public DbSet<CropCompatibility> CropCompatibility { get; set;}
+     }
 }
