@@ -10,7 +10,10 @@ builder.Services.AddScoped<IClimatePredictionsNew, ClimatePredictionsNew>();
 builder.Services.AddDbContext<DbContextClass>();
 builder.Services.AddScoped<ICropCompatibilityService, CropCompatibilityService>();
 builder.Services.AddDbContext<DbContextClass>();
-
+builder.Services.AddScoped<ICropService, CropService>();
+builder.Services.AddDbContext<DbContextClass>();
+builder.Services.AddScoped<ICropTempLimit, CropTempLimit>();
+builder.Services.AddDbContext<DbContextClass>();
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
