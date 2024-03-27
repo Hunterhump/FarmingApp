@@ -6,6 +6,8 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddScoped<IClimatePredictionService, ClimatePredictionServiceByState>();
 builder.Services.AddDbContext<DbContextClass>();
+builder.Services.AddScoped<IClimatePredictionsNew, ClimatePredictionsNew>();
+builder.Services.AddDbContext<DbContextClass>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
