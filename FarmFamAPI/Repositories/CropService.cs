@@ -13,6 +13,9 @@ namespace FarmFamAPI.Repositories
         {
             _dbContextClass = dbContextClass;
         }
-      
+        public async Task<List<CropService>> GetCropDetails()
+        {
+            return await GetCropDetails();
+        }
     }
 }
