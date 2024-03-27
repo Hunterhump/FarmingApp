@@ -6,10 +6,10 @@ using Microsoft.EntityFrameworkCore;
 
 namespace FarmFamAPI.Repositories
 {
-    public class ClimatePredictionService : IClimatePredictionService
+    public class ClimatePredictionServiceByState : IClimatePredictionService
     {
         private readonly DbContextClass _dbContextClass;
-        public ClimatePredictionService(DbContextClass dbContextClass)
+        public ClimatePredictionServiceByState(DbContextClass dbContextClass)
         {
             _dbContextClass = dbContextClass;
         }
