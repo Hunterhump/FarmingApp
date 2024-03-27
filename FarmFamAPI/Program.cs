@@ -4,7 +4,7 @@ using FarmFamAPI.Repositories;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddScoped<IClimatePredictionService, ClimatePredictionService>();
+builder.Services.AddScoped<IClimatePredictionService, ClimatePredictionServiceByState>();
 builder.Services.AddDbContext<DbContextClass>();
 
 builder.Services.AddControllers();
