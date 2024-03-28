@@ -25,7 +25,7 @@ namespace FarmFamAPI.Controllers
             {
                 return NotFound();
             }
-            return cropCompatibility;
+            return Ok(cropCompatibility);
         }
     }
 }
