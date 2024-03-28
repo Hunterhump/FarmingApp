@@ -14,6 +14,8 @@ namespace FarmFamAPI.Data
         public DbSet<FarmingPlan> FarmingPlan { get; set;}
         public DbSet<CropCompatibility> CropCompatibility { get; set;} 
      public DbSet<CropTempLimit> CropTempLimit { get; set;}
+        public DbSet<FarmingPlanByCompatibility> FarmingPlanByCompatibility { get;set;}
+
 
 
      }
