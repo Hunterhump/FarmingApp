@@ -5,7 +5,7 @@ VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FarmingApp", "FarmingApp\FarmingApp.csproj", "{8BAEE43D-3EFB-4279-B6BA-A54F56C87C80}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FarmFamAPI", "FarmFamAPI\FarmFamAPI.csproj", "{08456A37-F333-4ED5-BD72-B012602C653B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FarmFamAPI", "FarmFamAPI\FarmFamAPI.csproj", "{08456A37-F333-4ED5-BD72-B012602C653B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
