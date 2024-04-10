@@ -20,37 +20,37 @@ namespace FarmingApp.Pages
             _clientFactory = clientFactory;
         }
 
-        public List<ClimatePrediction> Climate Predictions { get; private set; }
+        //   public List<ClimatePrediction> Climate Predictions { get; private set; };
 
-    public async Task<IActionResult> OnGetAsync(string state)
-    {
-        if (string.IsNullOrWhiteSpace(state))
+        public async Task OnGetAsync(string stateAbbrevaiation)
         {
-            return BadRequest("State parameter is required.");
+            if (string.IsNullOrWhiteSpace(stateAbbrevaiation))
+            {
+                //return BadRequest("State parameter is required.");
+            }
+
+            string baseUrl = "http://localhost:7113";
+            string route = "/api/ClimatePrediction/";
+
+            string apiUrl = $"{baseUrl}{route}{stateAbbrevaiation}";
+
+            using (HttpClient client = new HttpClient())
+            {
+                HttpResponseMessage response = await client.GetAsync(apiUrl);
+
+                if (response.IsSuccessStatusCode)
+                {
+                    string responseBody = await response.Content.ReadAsStringAsync();
+                }
+                else
+                {
+                    //return NotFound();
+                }
+            }
+            //return Pages();
         }
 
-        string baseUrl = "http://localhost:7113";
-        string route = "/api/ClimatePrediction/";
-
-        string apiUrl = $"{baseUrl}{route}{stateAbbreviation}";
-
-        using (HttpClient client = new HttpClient())
-        {
-            HttpResponseMessage response = await client.GetAsync(apiUrl);
-
-            if (response.IsSuccessStatusCode)
-            {
-                string responseBody = await response.Content.ReadAsStringAsync();
-            }
-            else
-            {
-                return NotFound();
-            }
-        }
-
-            return Pages();
     }
-
 }
 
    
