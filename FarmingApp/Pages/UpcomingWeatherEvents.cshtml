@@ -1,4 +1,14 @@
 ﻿@page
-@model FarmingApp.Pages.Index1Model
+@model FarmingApp.Pages.UpcomingWeatherEventsModel
 @{
+    ViewData["Title"] = "Notable Weather Events in the United States 2024";
 }
+
+<h1>@ViewData["Title"]</h1>
+
+<ul>
+    @foreach (var event in Model.WeatherEvents)
+    {
+        <li>@event</li>
+    }
+</ul>

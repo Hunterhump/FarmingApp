@@ -18,7 +18,7 @@ namespace FarmFamAPI.Controllers
         }
 
         [HttpGet("{state}")]
-        public async Task<ActionResult<List<ClimatePrediction>>> GetClimatePredictionsByState(char state)
+        public async Task<ActionResult<List<ClimatePrediction>>> GetClimatePredictionsByState(string state)
         {
             var climatePredictionsByState = await climatePredictionService.GetClimatePredictionsByState(state);
             if (climatePredictionsByState == null)
