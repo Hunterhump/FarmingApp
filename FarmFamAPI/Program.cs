@@ -1,5 +1,6 @@
 using FarmFamAPI.Data;
 using FarmFamAPI.Repositories;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -17,7 +18,7 @@ builder.Services.AddDbContext<DbContextClass>();
 builder.Services.AddScoped<IFarmingPlanByCompatibility, FarmingPlanByCompatibility>();
 builder.Services.AddDbContext<DbContextClass>(options =>
 {
-    options.UseSqlServer(builder.Configuration.GetConnectionstring("DefaultConnection"));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
 
 builder.Services.AddControllers();

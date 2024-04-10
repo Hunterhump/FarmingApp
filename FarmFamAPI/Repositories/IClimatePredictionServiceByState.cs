@@ -4,7 +4,7 @@ namespace FarmFamAPI.Repositories
 {
     public interface IClimatePredictionService
     {
-        public Task<List<ClimatePrediction>> GetClimatePredictionsByState(char State);
+        public Task<List<ClimatePrediction>> GetClimatePredictionsByState(string State);
 
     }
 }
