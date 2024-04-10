@@ -15,7 +15,11 @@ builder.Services.AddDbContext<DbContextClass>();
 builder.Services.AddScoped<ICropTempLimit, CropTempLimit>();
 builder.Services.AddDbContext<DbContextClass>();
 builder.Services.AddScoped<IFarmingPlanByCompatibility, FarmingPlanByCompatibility>();
-builder.Services.AddDbContext< DbContextClass > ();
+builder.Services.AddDbContext<DbContextClass>(options =>
+{
+    options.UseSqlServer(builder.Configuration.GetConnectionstring("DefaultConnection"));
+});
+
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();

@@ -29,18 +29,26 @@ namespace FarmingApp.Pages
             return BadRequest("State parameter is required.");
         }
 
-        var client = _clientFactory.CreateClient();
-        var response = awaite client.GetAsync($"https://localhost:7113/api/ClimatePrediction/{state}");
+        string baseUrl = "http://localhost:7113";
+        string route = "/api/ClimatePrediction/";
 
-        if (!response.IsSuccessStatusCode)
+        string apiUrl = $"{baseUrl}{route}{stateAbbreviation}";
+
+        using (HttpClient client = new HttpClient())
         {
-            return NotFound();
+            HttpResponseMessage response = await client.GetAsync(apiUrl);
+
+            if (response.IsSuccessStatusCode)
+            {
+                string responseBody = await response.Content.ReadAsStringAsync();
+            }
+            else
+            {
+                return NotFound();
+            }
         }
 
-        using var responseStream = await response.Content.ReadAsStreamAsync();
-        ClimatePredictions = await JsonSerializer.DeserializeAsyn<List<ClimatePrediction>>(responseStream);
-
-        return Pages();
+            return Pages();
     }
 
 }
