@@ -3,12 +3,3 @@
 @{
     ViewData["Title"] = "Weather Events List";
 }
-
-<h1>@ViewData["Title"]</h1>
-
-<ul>
-    @foreach (var event in Model.WeatherEvents)
-    {
-        <li>@event</li>
-    }
-</ul>
