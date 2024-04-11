@@ -52,5 +52,3 @@ namespace FarmingApp.Pages.ClimateByState
 
     }
 }
-
-   

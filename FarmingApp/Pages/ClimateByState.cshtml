@@ -14,12 +14,9 @@
 
 @if (Model.ClimatePredictions != null && Model.Climate Predictions.Count > 0)
 {
-    <h2> Climate Predictions for @Model.ClimatePredictions[0].State;</h2>
-    <ul>
-        @foreach (var prediction in Model.ClimatePredictions)
-        {
-            <li>@prediction.Address, @prediction.City, @prediction.Zip - Temperature: @prediction.Temperature, Rainfall: @prediction.Rainfall, Date: @prediction.Date</li>
-        }
-    </ul>
-}
-
+<h2> Climate Predictions for @Model.ClimatePredictions[0].State;</h2>
+<ul>
+    @foreach (var prediction in Model.ClimatePredictions)
+    {
+        <li>@prediction.Address, @prediction.City, @prediction.Zip - Temperature: @prediction.Temperature, Rainfall: @prediction.Rainfall, Date: @prediction.Date</li>
+    }
