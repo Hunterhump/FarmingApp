@@ -1,8 +1,9 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using FarmFamAPI.Entities;
-using FarmFamAPI.Repositories;
+using FarmFamAPI.Repositories; // Assuming ICropService is defined in FarmFamAPI.Services namespace
 
 namespace FarmFamAPI.Controllers
 {
@@ -17,15 +18,15 @@ namespace FarmFamAPI.Controllers
             this.cropService = cropService;
         }
 
-        [HttpGet]
-        public async Task<List<CropService>> GetCropDetails(String CropName)
+        [HttpGet("{CropName}")]
+        public async Task<ActionResult<List<Crop>>> GetCropDetails(string CropName) 
         {
-            var cropService = await cropService.GetCropDetails(CropName);
-            if (cropService == null)
+            var cropDetails = await cropService.GetCropDetails(CropName);
+            if (cropDetails == null)
             {
                 return NotFound();
             }
-            return cropService;
+            return cropDetails;
         }
     }
 }
