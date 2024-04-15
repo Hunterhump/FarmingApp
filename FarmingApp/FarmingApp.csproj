@@ -19,5 +19,11 @@
 			<Link>Entities\%(RecursiveDir)%(FileName)%(Extension)</Link>
 		</Compile>
 	</ItemGroup>
+	<ItemGroup>
+	  <Compile Remove="Pages\ClimateByState.cshtml.cs" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Content Remove="Pages\ClimateByState.cshtml" />
+	</ItemGroup>
 
 </Project>
