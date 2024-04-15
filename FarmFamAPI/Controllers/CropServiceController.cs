@@ -18,14 +18,14 @@ namespace FarmFamAPI.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<List<CropService>>> GetCropDetails()
+        public async Task<List<CropService>> GetCropDetails(String CropName)
         {
-            var cropDetails = await cropService.GetCropDetails();
-            if (cropDetails == null)
+            var cropService = await cropService.GetCropDetails(CropName);
+            if (cropService == null)
             {
                 return NotFound();
             }
-            return cropDetails;
+            return cropService;
         }
     }
 }
