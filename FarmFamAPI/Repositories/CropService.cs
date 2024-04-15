@@ -13,10 +13,10 @@ namespace FarmFamAPI.Repositories
         {
             _dbContextClass = dbContextClass;
         }
-        public async Task<List<CropService>> GetCropDetails(String CropName)
+        public async Task<List<Crop>> GetCropDetails(String CropName)
         {
             var param = new SqlParameter("@CropName", CropName);
-            var cropService = await Task.Run(() => _dbContextClass.CropService.FromSqlRaw("exec CropService @CropName", param).ToListAsync());
+            var cropService = await Task.Run(() => _dbContextClass.Crop.FromSqlRaw("exec CropService @CropName", param).ToListAsync());
             return cropService;
         }
     }
