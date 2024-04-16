@@ -14,10 +14,11 @@ namespace FarmFamAPI.Repositories
         {
             _dbContextClass = dbContextClass;
         }
-        public async Task<List<CropCompatibilityService>> GetCropCompatibility()
+        public async Task<List<CropCompatibilityService>> GetCropCompatibility(string CropComp) 
         {
-            return await GetCropCompatibility();
-
+            var param = new SqlParameter("@CropComp", CropComp);
+            var cropComp = await Task.Run(() => _dbContextClass.CropCompatibility.FromSqlRaw("exec CropCompatibility @CropComp", param).ToListAsync());
+            return cropComp;
         }
 
     }

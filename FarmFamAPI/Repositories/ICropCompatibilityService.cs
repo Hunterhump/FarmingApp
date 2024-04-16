@@ -4,6 +4,6 @@ namespace FarmFamAPI.Repositories
 {
     public interface ICropCompatibilityService
     {
-        public Task<List<CropCompatibilityService>> GetCropCompatibility();
+        public Task<List<CropCompatibilityService>> GetCropCompatibility( string CropComp);
     }
 }

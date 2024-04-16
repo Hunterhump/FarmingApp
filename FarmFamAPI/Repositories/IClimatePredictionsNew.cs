@@ -5,6 +5,6 @@ namespace FarmFamAPI.Repositories
     public interface IClimatePredictionsNew
 
     {
-        public Task<List<ClimatePrediction>> GetClimatePredictions();
+        public Task<List<ClimatePrediction>> GetClimatePredictions(String ClimPre);
     }
 }
