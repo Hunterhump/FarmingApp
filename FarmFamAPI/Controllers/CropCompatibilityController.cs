@@ -17,10 +17,10 @@ namespace FarmFamAPI.Controllers
             this.cropCompatibilityService = cropCompatibilityService;
         }
 
-        [HttpGet]
-        public async Task<ActionResult<List<CropCompatibility>>> GetCropCompatibility()
+        [HttpGet("{CropComp}")]
+        public async Task<ActionResult<List<CropCompatibility>>> GetCropCompatibility(string CropComp)
         {
-            var cropCompatibility = await cropCompatibilityService.GetCropCompatibility();
+            var cropCompatibility = await cropCompatibilityService.GetCropCompatibility(CropComp);
             if (cropCompatibility == null)
             {
                 return NotFound();
