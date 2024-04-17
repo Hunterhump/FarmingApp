@@ -6,20 +6,21 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddScoped<IClimatePredictionService, ClimatePredictionServiceByState>();
-builder.Services.AddDbContext<DbContextClass>();
+
 builder.Services.AddScoped<IClimatePredictionsNew, ClimatePredictionsNew>();
-builder.Services.AddDbContext<DbContextClass>();
+
 builder.Services.AddScoped<ICropCompatibilityService, CropCompatibilityService>();
-builder.Services.AddDbContext<DbContextClass>();
+
 builder.Services.AddScoped<ICropService, CropService>();
-builder.Services.AddDbContext<DbContextClass>();
+
 builder.Services.AddScoped<ICropTempLimit, CropTempLimit>();
-builder.Services.AddDbContext<DbContextClass>();
+
 builder.Services.AddScoped<IFarmingPlanByCompatibility, FarmingPlanByCompatibility>();
 builder.Services.AddDbContext<DbContextClass>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
+
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

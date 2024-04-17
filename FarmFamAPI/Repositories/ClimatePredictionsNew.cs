@@ -13,12 +13,15 @@ namespace FarmFamAPI.Repositories
         {
             _dbContextClass = dbContextClass;
         }
-        public async Task<List<ClimatePrediction>> GetClimatePredictions()
+        public async Task<List<ClimatePrediction>> GetClimatePredictions(String ClimPre)
         {
-            return await GetClimatePredictions();
-
+            var param = new SqlParameter("@ClimPre", ClimPre);
+            var climPrediction = await Task.Run(() => _dbContextClass.ClimatePredictions.FromSqlRaw("exec ClimatePrediction @ClimPre", param).ToListAsync());
+            return climPrediction;
         }
+
+    }
         
     }
 
-}
+

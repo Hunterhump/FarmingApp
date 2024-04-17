@@ -9,7 +9,7 @@ using FarmFamAPI.Entities;
 
 
 
-namespace FarmingApp.Pages
+namespace FarmingApp.Pages.ClimateByState
 {
     public class ClimateByStateModel : PageModel
     {
@@ -52,5 +52,3 @@ namespace FarmingApp.Pages
 
     }
 }
-
-   

@@ -1,8 +1,9 @@
-﻿using FarmFamAPI.Data;
+﻿using System.Collections.Generic;
+using System.Threading.Tasks;
+using FarmFamAPI.Data;
 using FarmFamAPI.Entities;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
-
 
 namespace FarmFamAPI.Repositories
 {
@@ -14,12 +15,12 @@ namespace FarmFamAPI.Repositories
         {
             _dbContextClass = dbContextClass;
         }
-        public async Task<List<CropCompatibilityService>> GetCropCompatibility()
+
+        public async Task<List<CropCompatibility>> GetCropCompatibility(string CropComp) 
         {
-            return await GetCropCompatibility();
-
+            var param = new SqlParameter("@CropComp", CropComp);
+            var cropComp = await _dbContextClass.CropCompatibility.FromSqlRaw("exec CropCompatibility @CropComp", param).ToListAsync();
+            return cropComp;
         }
-
     }
-
 }

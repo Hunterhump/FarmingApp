@@ -17,10 +17,10 @@ namespace FarmFamAPI.Controllers
             this.climatePredictionsNew = climatePredictionsNew;
         }
 
-        [HttpGet]
-        public async Task<ActionResult<List<ClimatePrediction>>> GetClimatePredictions()
+        [HttpGet("{ClimPre}")]
+        public async Task<ActionResult<List<ClimatePrediction>>> GetClimatePredictions(string ClimPre)
         {
-            var climatePredictions = await climatePredictionsNew.GetClimatePredictions();
+            var climatePredictions = await climatePredictionsNew.GetClimatePredictions( ClimPre);
             if (climatePredictions == null)
             {
                 return NotFound();
