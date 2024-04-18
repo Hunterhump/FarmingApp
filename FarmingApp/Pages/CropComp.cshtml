@@ -2,4 +2,12 @@
 @model FarmingApp.Pages.PZ1Model
 @{
 }
-<h2 id=""></h2>
+<h2 align="center"><strong> Find out which crops work together!</strong></h2>
+<h2 align="center">&#127805;&#129382;&#129364;</h2>
+<form id="locationForm" action="/CropCompSearchResults">
+
+
+    <input type="text" id="cropInp" name="crop" class="form-control" value="Enter your crop here!" />
+
+    <input type="submit" id="submitBtn" value="Search" class="btn btn-primary" />
+</form>
