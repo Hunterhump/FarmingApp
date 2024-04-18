@@ -22,9 +22,9 @@ namespace FarmingApp.Pages.ClimateByState
 
         //   public List<ClimatePrediction> Climate Predictions { get; private set; };
 
-        public async Task OnGetAsync(string stateAbbrevaiation)
+        public async Task OnGetAsync(string stateAbbreviation)
         {
-            if (string.IsNullOrWhiteSpace(stateAbbrevaiation))
+            if (string.IsNullOrWhiteSpace(stateAbbreviation))
             {
                 //return BadRequest("State parameter is required.");
             }
