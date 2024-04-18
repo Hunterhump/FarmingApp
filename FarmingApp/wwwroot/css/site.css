@@ -49,11 +49,11 @@ h4 {
     color: forestgreen;
     text-align: center;
     font-family: Courier New, monospace;
+   
 }
 
 table, th, td {
     border: 3px solid forestgreen;
     border-collapse: collapse;
     border-radius: 10px;
-
 }
