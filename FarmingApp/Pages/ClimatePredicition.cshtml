@@ -2,3 +2,17 @@
 @model FarmingApp.Pages.ClimatePredicitionModel
 @{
 }
+
+<h2 align="center"><strong>Enter State or Address of Desired Climate Prediction</strong></h2>
+<form id="locationForm" action="/ClimatePredictionSearchResults">
+
+
+    <input type="text" id="stateInp" name="state" class="form-control" value="Enter State. (XX)" />
+
+    <input type="text" id="addressInp" name="address" class="form-control" value="Enter Address." />
+
+    <input type="submit" id="submitBtn" value="Search" class="btn btn-primary" />
+</form>
+
+
+
