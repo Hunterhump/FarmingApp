@@ -17,23 +17,23 @@ This application is a prototype for a climate data-based web app for farmers onl
      [https://github.com/Hunterhump/MIST-353-Project](https://github.com/Hunterhump/MIST-353-Project)
 
    Start with executing these files to initialize the database and create the tables:
-   - FarmFamDB.sql
-   - ClimatePredictionTable.sql
-   - CropCompatibilityTable.sql
-   - CropTable.sql
-   - FarmingPlanTable.sql
+   - [FarmFamDB.sql](https://github.com/Hunterhump/MIST-353-Project/blob/main/FarmFamDB.sql)
+   - [ClimatePredictionTable.sql](https://github.com/Hunterhump/MIST-353-Project/blob/main/ClimatePredictionTable.sql)
+   - [CropCompatibilityTable.sql](https://github.com/Hunterhump/MIST-353-Project/blob/main/CropCompatibilityTable.sql)
+   - [CropTable.sql](https://github.com/Hunterhump/MIST-353-Project/blob/main/CropTable.sql)
+   - [FarmingPlanTable.sql](https://github.com/Hunterhump/MIST-353-Project/blob/main/FarmingPlanTable.sql)
 
    Next, you will need to execute the following file in SQL to fill the databases with mock data:
-   - DataEntry.sql
+   - [DataEntry.sql](https://github.com/Hunterhump/MIST-353-Project/blob/main/DataEntry.sql)
 
    Lastly, you will need to add our stored procedures linked below:
-   - DavidHumprhiesSP.sql
-   - OliviaStaudSP.sql
-   - PorterMartinSP.SQL
+   - [DavidHumprhiesSP.sql](https://github.com/Hunterhump/MIST-353-Project/blob/main/DavidHumphriesSP.sql)
+   - [OliviaStaudSP.sql](https://github.com/Hunterhump/MIST-353-Project/blob/main/OliviaStaudSP.sql)
+   - [PorterMartinSP.SQL](https://github.com/Hunterhump/MIST-353-Project/blob/main/PorterMartinSP.SQL)
 
 3. **Configuring the Project:** Running this project requires you to modify the database connection string in the `appsettings.json` file, found in:
-   - FarmFamAPI/appsettings.json
-   - FarmingApp/appsettings.json
+   - [FarmFamAPI/appsettings.json](https://github.com/Hunterhump/FarmingApp/blob/master/FarmFamAPI/appsettings.json)
+   - [FarmingApp/appsettings.json](https://github.com/Hunterhump/FarmingApp/blob/master/FarmingApp/appsettings.json)
 
 4. **Running the Project:** When starting the project make sure that the website launches along with the API services to analyze both the APIs and web app. This is done by opening the (Configure Start-Up Projects) drop-down menu.
 
