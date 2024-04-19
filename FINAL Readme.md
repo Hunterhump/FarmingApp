@@ -83,7 +83,7 @@ For most of our issues, we relied on our professor's recorded lectures, W3 Schoo
 ## Developer Documentation
 
 ### Key Features:
-Key Features
+
 - **Stored Procedures:** FarmFam utilizes stored procedures in the SQL Server database for efficient data retrieval and processing.
 - **APIs:** This application contains several APIs to interact with the data, including APIs for retrieving climate predictions, crop details, and farming plans.
 
