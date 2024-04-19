@@ -74,3 +74,75 @@ For most of our issues, we relied on our professor's recorded lectures, W3 Schoo
 - **CropDetails (CropDetails API) - Porter:** The crop details page uses the CropDetails API created by our group. It features a search bar where the user inserts the name of the crop they wish to see described. The program then displays information like CropID, CropName, CropType, and PredictionID. This information can be used in the CropComp API as well.
 
 - **CropComp (CropComp API) - Porter:** The crop compatibility page of our web application prompts the user to enter their desired crop and then gives the user a list of other crops that are compatible with the crop the user entered. The list will also rate which crops work best with the user-inserted crop, rating the compatibility from poor, fair, and good.
+
+##ChatGPT Prompts
+- Can you help create a deployment guide based on this information: Your final documentation for your application should be in README.md document(s) in your GitHub repository and should include:
+•	A deployment guide. This should walk someone with a blank VM through how to get your application up and running and answer the following questions:
+o	What steps should they take (creating the database, cloning the repository, etc.)?
+o	What order should they take the steps in?
+o	What pitfalls should they avoid?
+
+Certainly! Here's a sample deployment guide for your application:
+Application Deployment Guide
+Overview
+
+This guide will walk you through the steps required to deploy our application on a blank virtual machine (VM). Please follow these instructions carefully to ensure a successful deployment.
+Prerequisites
+
+Before starting the deployment process, make sure you have the following:
+
+    A blank virtual machine with a suitable operating system installed (e.g., Ubuntu 20.04 LTS).
+    Internet connectivity on the VM to download necessary dependencies.
+    Basic knowledge of the command line interface (CLI) and system administration.
+
+Step-by-Step Deployment
+1. Setting Up the Environment
+
+    Clone the Repository: Begin by cloning the application repository from GitHub.
+
+    bash
+
+    git clone https://github.com/your_username/your_repository.git
+
+2. Database Configuration
+
+    Create the Database: Set up your database by following the instructions provided in the database/README.md file within the repository.
+
+    bash
+
+    cd your_repository/database
+    # Follow instructions in database/README.md
+
+3. Application Configuration
+
+    Configure Environment Variables: Update the necessary environment variables required for the application to run. Refer to the .env.example file for guidance.
+
+    bash
+
+    cd your_repository
+    cp .env.example .env
+    # Modify .env file with appropriate configurations
+
+4. Installing Dependencies
+
+    Install Dependencies: Install the required dependencies for the application.
+
+    bash
+
+    cd your_repository
+    npm install # or yarn install
+
+5. Running the Application
+
+    Start the Application: Launch the application by running the start command.
+
+    bash
+
+    npm start # or yarn start
+
+Pitfalls to Avoid
+
+    Ensure all dependencies are installed correctly by running npm install or yarn install without any errors.
+    Double-check database configurations and ensure the database is properly set up before starting the application.
+
+
