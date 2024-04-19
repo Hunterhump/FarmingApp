@@ -80,6 +80,29 @@ For most of our issues, we relied on our professor's recorded lectures, W3 Schoo
 - **UpcomingWeatherEvents - Olivia:** The Upcoming Weather Events page of our web application serves as a center for users to access information on upcoming weather events. Users can refer to this page to make informed decisions regarding their plans, such as watering schedules and crop choices. For example, if there is a forecast for record-breaking heat this summer, it will be displayed on this page to assist users in planning accordingly.
 
 
+## Developer Documentation
+
+### Key Features:
+Key Features
+- **Stored Procedures:** FarmFam utilizes stored procedures in the SQL Server database for efficient data retrieval and processing.
+- **APIs:** This application contains several APIs to interact with the data, including APIs for retrieving climate predictions, crop details, and farming plans.
+
+### Technology Stack:
+
+- **Frontend:** HTML, CSS, JavaScript
+- **Backend:** C#, ASP.NET Core
+- **Database:** SQL Server
+- **Version Control:** Git, Github
+- **Development Environment:** Visual Studio
+
+### Environment Setup:
+
+To set up the development environment, developers should install Visual Studio, SQL Server, and GitHub Desktop, and clone the project repository from GitHub.
+
+### Known Issues:
+Due to technical difficulties, the APIs are not currently functional. We are working to resolve these issues and restore full functionality.
+
+
 ## ChatGPT Prompts 
 
 - **Question** - Can you help create a deployment guide based on this information: Your final documentation for your application should be in README.md document(s) in your GitHub repository and should include:
