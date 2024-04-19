@@ -76,6 +76,13 @@ For most of our issues, we relied on our professor's recorded lectures, W3 Schoo
 - **CropComp (CropComp API) - Porter:** The crop compatibility page of our web application prompts the user to enter their desired crop and then gives the user a list of other crops that are compatible with the crop the user entered. The list will also rate which crops work best with the user-inserted crop, rating the compatibility from poor, fair, and good.
 
 ## ChatGPT Prompts 
+
+- **Question** - Can you help create a deployment guide based on this information: Your final documentation for your application should be in README.md document(s) in your GitHub repository and should include:
+•	A deployment guide. This should walk someone with a blank VM through how to get your application up and running and answer the following questions:
+o	What steps should they take (creating the database, cloning the repository, etc.)?
+o	What order should they take the steps in?
+o	What pitfalls should they avoid?
+
 Certainly! Here's a sample deployment guide for your application:
 
 **Overview**
