@@ -75,6 +75,11 @@ For most of our issues, we relied on our professor's recorded lectures, W3 Schoo
 
 - **CropComp (CropComp API) - Porter:** The crop compatibility page of our web application prompts the user to enter their desired crop and then gives the user a list of other crops that are compatible with the crop the user entered. The list will also rate which crops work best with the user-inserted crop, rating the compatibility from poor, fair, and good.
 
+- **ClimatePrediction (ClimatePrediction API) - Olivia:** The Climate Prediction page of our web application allows users to input either the state or address of their desired location to receive climate predictions. Although initially intended to integrate the ClimatePrediction API, it is currently absent from the code due to technical difficulties in its implementation.
+
+- **UpcomingWeatherEvents - Olivia:** The Upcoming Weather Events page of our web application serves as a center for users to access information on upcoming weather events. Users can refer to this page to make informed decisions regarding their plans, such as watering schedules and crop choices. For example, if there is a forecast for record-breaking heat this summer, it will be displayed on this page to assist users in planning accordingly.
+
+
 ## ChatGPT Prompts 
 
 - **Question** - Can you help create a deployment guide based on this information: Your final documentation for your application should be in README.md document(s) in your GitHub repository and should include:
